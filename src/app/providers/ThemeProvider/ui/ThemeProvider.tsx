@@ -10,8 +10,6 @@ interface IProps {
 const ThemeProvider = ({ children }: IProps) => {
    const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-
-
    const defaultProps = useMemo(() => ({
       theme: theme,
       setTheme: setTheme
