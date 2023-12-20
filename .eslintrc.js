@@ -1,7 +1,8 @@
 module.exports = {
    "env": {
       "browser": true,
-      "es2021": true
+      "es2021": true,
+      "jest": true
    },
    "extends": [
       "eslint:recommended",
@@ -38,7 +39,10 @@ module.exports = {
       "@stylistic/js/indent": ["error", 3],
       "quotes": ["error", "double"],
       "semi": ["error", "always"],
-      "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".tsx"] }],
+      "react/jsx-filename-extension": [
+         2,
+         { extensions: [".js", ".jsx", ".tsx"] }
+      ],
       "react/jsx-indent": [2, 3],
       "react/jsx-indent-props": [2, 3],
       "import/no-unresolved": "off",
@@ -54,6 +58,7 @@ module.exports = {
       "no-underscore-dangle": "off",
       "@typescript-eslint/no-unused-vars": "off",
       "i18next/no-literal-string": ["error", { markupOnly: true }],
+      "max-len": ["error", { ignoreComments: true }]
    },
    "globals": {
       "__IS_DEV__": true,
