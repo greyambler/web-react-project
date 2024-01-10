@@ -16,10 +16,14 @@ module.exports = {
             "node": true
          },
          "files": [
-            ".eslintrc.{js,cjs}"
+            ".eslintrc.{js,cjs}",
+            "**/src/**/*.test.{ts,tsx}"
          ],
          "parserOptions": {
             "sourceType": "script"
+         },
+         "rules": {
+            "i18next/no-literal-string": "off",
          }
       }
    ],
@@ -57,11 +61,17 @@ module.exports = {
       "import/no-extraneous-dependencies": "off",
       "no-underscore-dangle": "off",
       "@typescript-eslint/no-unused-vars": "off",
-      "i18next/no-literal-string": ["error", { markupOnly: true }],
+      "i18next/no-literal-string": [
+         "error",
+         {
+            markupOnly: true,
+            ignoreAttribute: ["data-testid"],
+         },
+      ],
       "max-len": ["error", { ignoreComments: true, code: 100 }],
       "@typescript-eslint/ban-ts-comment": "off"
    },
    "globals": {
       "__IS_DEV__": true,
-   },
+   }
 };
