@@ -58,7 +58,7 @@ module.exports = {
       "no-underscore-dangle": "off",
       "@typescript-eslint/no-unused-vars": "off",
       "i18next/no-literal-string": ["error", { markupOnly: true }],
-      "max-len": ["error", { ignoreComments: true }],
+      "max-len": ["error", { ignoreComments: true, code: 100 }],
       "@typescript-eslint/ban-ts-comment": "off"
    },
    "globals": {
