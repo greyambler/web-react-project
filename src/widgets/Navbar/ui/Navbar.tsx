@@ -18,7 +18,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                className={cls.mainLink}>
                {t("Главная")}
             </AppLink>
-            <AppLink theme={AppLinkTheme.RED} to={"/about"}>
+            <AppLink theme={AppLinkTheme.RED} to="/about">
                {t("О сайте")}
 
             </AppLink>
