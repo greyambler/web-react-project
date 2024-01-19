@@ -9,6 +9,7 @@ module.exports = {
       "plugin:@typescript-eslint/recommended",
       "plugin:react/recommended",
       "plugin:i18next/recommended",
+      "plugin:storybook/recommended"
    ],
    "overrides": [
       {
@@ -61,6 +62,7 @@ module.exports = {
       "import/no-extraneous-dependencies": "off",
       "no-underscore-dangle": "off",
       "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
       "i18next/no-literal-string": [
          "error",
          {
@@ -69,7 +71,9 @@ module.exports = {
          },
       ],
       "max-len": ["error", { ignoreComments: true, code: 100 }],
-      "@typescript-eslint/ban-ts-comment": "off"
+      "@typescript-eslint/ban-ts-comment": "off",
+      "react/display-name":"off"
+
    },
    "globals": {
       "__IS_DEV__": true,
