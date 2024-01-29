@@ -7,7 +7,7 @@ services:
     volumes: 
       - "/app/node_modules"
     
-
+# docker build -t imf:t1 .
 # docker-compose up --build -d
 # docker stop con
 
