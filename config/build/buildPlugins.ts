@@ -2,13 +2,10 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import { BuildOptions } from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
-export function buildPlugins({ paths, isDev }: BuildOptions):
-   webpack.WebpackPluginInstance[] {
-
-   return [
+export function buildPlugins({ paths, isDev }: BuildOptions):webpack.WebpackPluginInstance[] {
+   const plugins = [
       new HtmlWebpackPlugin({
          template: paths.html,
       }),
@@ -20,10 +17,14 @@ export function buildPlugins({ paths, isDev }: BuildOptions):
       new webpack.DefinePlugin({
          __IS_DEV__: JSON.stringify(isDev),
       }),
-      new webpack.HotModuleReplacementPlugin(),
-      isDev && new ReactRefreshWebpackPlugin(),
-      new BundleAnalyzerPlugin({
-         openAnalyzer:false
-      })
    ];
+
+   if (isDev) {
+      plugins.push(new webpack.HotModuleReplacementPlugin());
+      plugins.push(new BundleAnalyzerPlugin({
+         openAnalyzer: false,
+      }));
+   }
+
+   return plugins;
 }
