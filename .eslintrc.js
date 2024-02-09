@@ -18,13 +18,14 @@ module.exports = {
          },
          "files": [
             ".eslintrc.{js,cjs}",
-            "**/src/**/*.test.{ts,tsx}"
+            "**/src/**/*.{test,stories}.{ts,tsx}"
          ],
          "parserOptions": {
             "sourceType": "script"
          },
          "rules": {
             "i18next/no-literal-string": "off",
+            "max-len": "off",
          }
       }
    ],
@@ -38,6 +39,7 @@ module.exports = {
       "react",
       "@stylistic/js",
       "i18next",
+      "react-hooks",
    ],
    "rules": {
       "indent": ["error", 3],
@@ -72,8 +74,9 @@ module.exports = {
       ],
       "max-len": ["error", { ignoreComments: true, code: 100 }],
       "@typescript-eslint/ban-ts-comment": "off",
-      "react/display-name":"off"
-
+      "react/display-name": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "error"
    },
    "globals": {
       "__IS_DEV__": true,
