@@ -4,5 +4,7 @@
   "throw error": "throw error",
   "Произошла непредвиденная ошибка": "An unexpected error has occurred",
   "Обновить страницу": "Refresh the page",
-  "Войти": "Log in"
+  "Войти": "Log in",
+  "increment": "increment",
+  "decrement": "decrement"
 }
