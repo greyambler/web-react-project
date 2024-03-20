@@ -72,7 +72,7 @@ module.exports = {
             ignoreAttribute: ["data-testid", "to"],
          },
       ],
-      "max-len": ["error", { ignoreComments: true, code: 100 }],
+      "max-len": ["error", { ignoreComments: true, code: 120 }],
       "@typescript-eslint/ban-ts-comment": "off",
       "react/display-name": "off",
       "react-hooks/rules-of-hooks": "error",
