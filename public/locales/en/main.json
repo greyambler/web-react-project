@@ -4,5 +4,6 @@
   "Введите username": "Enter username",
   "Форма авторизации": "Authorization form",
   "Вы ввели неверный логин или пароль": "You entered an incorrect username or password",
-  "Выйти": "Go out"
+  "Выйти": "Go out",
+  "PROFILE PAGE": "PROFILE PAGE"
 }
