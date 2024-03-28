@@ -11,15 +11,15 @@ import { StoreProvider } from "app/providers/StoreProvider";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-   <BrowserRouter>
-      <StoreProvider>
-         <React.StrictMode>
+   <React.StrictMode>
+      <BrowserRouter>
+         <StoreProvider>
             <ErrorBoundary>
                <ThemeProvider>
                   <App />
                </ThemeProvider>
             </ErrorBoundary>
-         </React.StrictMode>
-      </StoreProvider>
-   </BrowserRouter >,
+         </StoreProvider>
+      </BrowserRouter >
+   </React.StrictMode>,
 );
