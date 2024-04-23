@@ -41,8 +41,6 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
    }, [dispatch]);
 
    const onLoginClick = useCallback(async() => {
-      //any - потому что какая то хреновая ошибка 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const result  = await dispatch(loginByUsername({ username, password }));
       if (result.meta.requestStatus === "fulfilled") {
          onSuccess();

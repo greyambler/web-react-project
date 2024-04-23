@@ -3,11 +3,9 @@ import { getCounterValue } from "./getCounterValue";
 
 describe("getCounterValue.test", () => {
    test("", () => {
-      const state: StateSchema = {
+      const state: DeepPartial<StateSchema> = {
          counter: { value: 10 },
-         user: undefined,
-         loginForm: undefined
       };
-      expect(getCounterValue(state)).toEqual(10);
+      expect(getCounterValue(state as StateSchema)).toEqual(10);
    });
 });

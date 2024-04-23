@@ -1,4 +1,4 @@
-import { configureStore, ReducersMapObject } from "@reduxjs/toolkit";
+import { Action, configureStore, Reducer, ReducersMapObject } from "@reduxjs/toolkit";
 import { counterReducer } from "entities/Counter";
 import { userReducer } from "entities/User";
 import { StateSchema, ThunkExtraArg } from "./StateSchema";
@@ -26,8 +26,9 @@ export function createReduxStore(
       navigate,
    };
 
-   const store = configureStore<StateSchema>({
-      reducer: reducerManager.reduce,
+   const store = configureStore({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      reducer: reducerManager.reduce as any,
       devTools: __IS_DEV__,
       preloadedState: initialState,
       middleware: (getDefaultMiddleware) => getDefaultMiddleware({ 

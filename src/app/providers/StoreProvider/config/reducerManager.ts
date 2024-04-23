@@ -12,7 +12,8 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
 
    return {
       getReducerMap: () => reducers,
-      reduce: (state: StateSchema, action: Action) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      reduce: (state: any, action: Action) => {
          if (keysToRemove.length > 0) {
             state = { ...state };
             keysToRemove.forEach((key) => {

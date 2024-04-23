@@ -9,11 +9,9 @@ import { AxiosInstance } from "axios";
 import { To } from "@remix-run/router"; // "history";
 import { NavigateOptions } from "react-router";
 
-// import { CombinedState } from "redux";
-
 export interface StateSchema {
-   counter?: CounterSchema;
-   user?: UserSchema;
+   counter: CounterSchema;
+   user: UserSchema;
 
    // Асинхронные редюсеры
    loginForm?: LoginSchema;
@@ -35,7 +33,7 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 
 export interface ThunkExtraArg {
    api: AxiosInstance;
-   navigate: (to: To, options?: NavigateOptions) => void,
+   navigate?: (to: To, options?: NavigateOptions) => void,
 }
 
 export interface ThunkConfig<T> {

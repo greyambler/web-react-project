@@ -8,7 +8,7 @@ import "app/styles/index.scss";
 import "./shared/config/i18n/i18n";
 import { StoreProvider } from "app/providers/StoreProvider";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root") as Element);
 
 root.render(
    <React.StrictMode>
