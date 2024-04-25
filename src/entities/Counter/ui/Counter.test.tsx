@@ -8,9 +8,7 @@ describe("Counter", () => {
    test("test render", () => {
       componentRender(<Counter />, {
          initialState: {
-            counter: { value: 10 },
-            user: undefined,
-            loginForm: undefined
+            counter: { value: 10 }
          },
       });
       expect(screen.getByTestId("value-title")).toHaveTextContent("10");
@@ -19,9 +17,7 @@ describe("Counter", () => {
    test("increment", async () => {
       componentRender(<Counter />, {
          initialState: {
-            counter: { value: 10 },
-            user: undefined,
-            loginForm: undefined
+            counter: { value: 10 }
          },
       });
       await act(async () => {
@@ -33,9 +29,7 @@ describe("Counter", () => {
    test("decrement", async () => {
       componentRender(<Counter />, {
          initialState: {
-            counter: { value: 10 },
-            user: undefined,
-            loginForm: undefined
+            counter: { value: 10 }
          },
       });
       await act(async () => {
