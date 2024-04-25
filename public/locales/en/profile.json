@@ -10,5 +10,10 @@
   "profile.Введите имя пользователя": "Enter your username",
   "profile.Введите ссылку на аватар": "Enter a link to your avatar",
   "profile.Отменить": "Cancel",
-  "profile.Сохранить": "Save"
+  "profile.Сохранить": "Save",
+  "profile.Серверная ошибка при сохранении": "Server error when saving",
+  "profile.Некорректный регион": "Invalid region",
+  "profile.Данные не указаны": "Data not provided",
+  "profile.Имя и фамилия обязательны": "First and last name are required",
+  "profile.Некорректный возраст": "Incorrect age"
 }
