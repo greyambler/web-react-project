@@ -42,6 +42,8 @@ module.exports = {
       "react-hooks",
    ],
    "rules": {
+      "react/jsx-indent": [2, 3],
+      "react/jsx-indent-props": [2, 3],
       "indent": ["error", 3],
       "@stylistic/js/indent": ["error", 3],
       "quotes": ["error", "double"],
@@ -50,8 +52,6 @@ module.exports = {
          2,
          { extensions: [".js", ".jsx", ".tsx"] }
       ],
-      "react/jsx-indent": [2, 3],
-      "react/jsx-indent-props": [2, 3],
       "import/no-unresolved": "off",
       "import/prefer-default-export": "off",
       "no-unused-vars": "off",
